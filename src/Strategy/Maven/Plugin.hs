@@ -250,8 +250,8 @@ mavenPluginDependenciesCmd workdir plugin = do
     args =
       [ group plugin <> ":" <> artifact plugin <> ":" <> version plugin <> ":aggregate"
       , "-DgraphFormat=text"
-      , -- display deps that appear multiple times in different scopes as a single node
-        "-DmergeScopes"
+      --, -- display deps that appear multiple times in different scopes as a single node
+        --"-DmergeScopes"
       , -- Don't omit edges for deps appearing in multiple places in the graph
         "-DreduceEdges=false"
       , "-DshowVersions=true"
